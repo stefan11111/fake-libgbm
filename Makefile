@@ -22,9 +22,10 @@ install: libgbm.so.1.0.0
 	cp -f libgbm.so.1.0.0 ${DESTDIR}/usr${LIBDIR}/libgbm.so.1.0.0
 	ln -rsf ${DESTDIR}/usr${LIBDIR}/libgbm.so.1.0.0 ${DESTDIR}/usr${LIBDIR}/libgbm.so.1
 	ln -rsf ${DESTDIR}/usr${LIBDIR}/libgbm.so.1 ${DESTDIR}/usr${LIBDIR}/libgbm.so
+	cp -f gbm.pc ${DESTDIR}/usr${LIBDIR}/pkgconfig/gbm.pc
 
 uninstall:
-	rm -f ${DESTDIR}/usr${LIBDIR}/libgbm.so.1.0.0 ${DESTDIR}/usr${LIBDIR}/libgbm.so.1 ${DESTDIR}/usr${LIBDIR}/libgbm.so
+	rm -f ${DESTDIR}/usr${LIBDIR}/libgbm.so.1.0.0 ${DESTDIR}/usr${LIBDIR}/libgbm.so.1 ${DESTDIR}/usr${LIBDIR}/libgbm.so ${DESTDIR}/usr${LIBDIR}/pkgconfig/gbm.pc
 clean:
 	rm -f libgbm.so.1.0.0 ${OBJ}
 
