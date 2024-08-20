@@ -1,8 +1,9 @@
 prefix=/usr
 includedir=${prefix}/include
-libdir=${prefix}/lib64
+_libdir=__libdir__
+libdir=${prefix}${_libdir}
 
-gbmbackendspath=/usr/lib64/gbm
+gbmbackendspath=${libdir}/gbm
 
 Name: gbm
 Description: Mesa gbm library
