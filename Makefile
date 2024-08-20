@@ -23,7 +23,7 @@ install: libgbm.so.1.0.0
 	ln -rsf ${DESTDIR}/usr${LIBDIR}/libgbm.so.1.0.0 ${DESTDIR}/usr${LIBDIR}/libgbm.so.1
 	ln -rsf ${DESTDIR}/usr${LIBDIR}/libgbm.so.1 ${DESTDIR}/usr${LIBDIR}/libgbm.so
 	mkdir -p ${DESTDIR}/usr${LIBDIR}/pkgconfig
-	sed -i 's/__libdir__/\${LIBDIR}/g' gbm.pc
+	sed -e 's/__libdir__/\${LIBDIR}/g' gbm.pc.in > gbm.pc
 	cp -f gbm.pc ${DESTDIR}/usr${LIBDIR}/pkgconfig/gbm.pc
 
 uninstall:
