@@ -217,7 +217,7 @@ int
 gbm_bo_write(struct gbm_bo *bo, const void *buf, size_t count) { return 0; }
 void
 gbm_bo_set_user_data(struct gbm_bo *bo, void *data,
-void (*destroy_user_data)(struct gbm_bo *, void *));
+void (*destroy_user_data)(struct gbm_bo *, void *)) {}
 void *
 gbm_bo_get_user_data(struct gbm_bo *bo) { return 0; }
 void
